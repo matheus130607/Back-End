@@ -1,9 +1,9 @@
 <?php
 
 $nome = "Enzo Enrico";
-$presença = 75;
-$nota2 = 0;
-$nota = 7;
+$presença = readline("Digite a presença em %: ");
+$nota2 = readline("Digite a segunda nota: ");
+$nota = readline("Digite a primeira nota: ");
 $media = ($nota + $nota2) /2;
 
 if ($presença >= 75 && $media >= 7 || $nome == "Enzo Enrico") {
