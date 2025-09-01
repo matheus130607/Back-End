@@ -28,7 +28,7 @@ class Pessoa{
         $this -> cpf = preg_replace("/\D/", "", $cpf);
     }
 
-    public function getcpf($cpf) {
+    public function getcpf() {
         return $this -> cpf;
     }
 
