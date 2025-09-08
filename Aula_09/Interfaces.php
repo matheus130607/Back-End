@@ -137,7 +137,7 @@ $quadrado1 = new Quadrado(readline("Digite o valor do lado do quadrado: "));
 echo "Area Quadrado: "  .$quadrado1 -> calcularArea()."\n"; 
 
 $circulo1 = new circulo(readline("Digite o valor do raio do circulo: "));
-echo number_format("Area Circulo: " .$circulo1 -> calcularArea(). "\n");
+echo "Area Circulo: ". number_format( $circulo1 -> calcularArea(), 2). "\n";
 
 $pentagono1 = new Pentagono(readline("Digite o valor do lado do pentagono: "), readline("Digite o valor da apotema do pentagono: "));
 echo "Area Pentagono: " .$pentagono1 -> calcularArea(). "\n";
