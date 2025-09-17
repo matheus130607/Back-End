@@ -29,7 +29,7 @@ interface Pagamento{ //Interface de contrato de pagamento
 
 class CartaoDeCredito implements Pagamento{ //Criando classe CartaodeCredito com implementação da interface Pagamento
     public function pagar($valor) { //Criando o método obrigtório pagar()
-        echo "Pagemento realizado com o cartao de crédito, valor $valor\n";
+        echo "Pagamento realizado com o cartao de crédito, valor $valor\n";
     }
 }
 
