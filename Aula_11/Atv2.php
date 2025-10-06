@@ -5,8 +5,17 @@
 // fazer treinamentos especiais no Cotil e, depois, irão ao shopping para doar
 // brinquedos às crianças.
 
-// Classes: Heroi, Locais, Missao, Shopping
+// Classes: Heroi, Locais, Missao, Shopping, Brinquedo, Crianca
 // Metodos: precisar, fazer, ir, doar
+
+// Relacionando Classes (Associação, Composição e Agregação):
+// Heroi e Locais - Associação
+// Heroi e Missao - Associação
+// Heroi e Brinquedo - Associação
+//Heroi e Crianca - Associação
+//Crianca e Brinquedo - Agregação
+// locais e shopping - agregação
+
 class Heroi {
    private $nome_heroi;
    private $poder_heroi;

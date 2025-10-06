@@ -4,8 +4,16 @@
 // "Um sistema de biblioteca deve permitir que usuários (alunos e professores)
 // façam empréstimos de livros e revistas."
 
-// Classes: Usuarios, Itens
-// Metodos: permitir, fazer, emprestar
+// Classes: Usuarios, Itens, SistemaDeBiblioteca, Emprestimo
+// Metodos: solicitarEmprestimo, devolverItem, registrarEmprestimo, registrarDevolucao, emprestar, devolver, finalizar
+
+// Relacionando Classes (Associação, Composição e Agregação):
+//Usuarios e Itens - Associação
+// Usuarios e SistemaDeBiblioteca - Associação
+// Itens e SistemaDeBiblioteca - Associação
+// Emprestimo e Usuarios - Agregação
+
+
 
 class Usuarios {
     private $nome_usuario;

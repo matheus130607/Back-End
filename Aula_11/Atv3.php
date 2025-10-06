@@ -5,8 +5,19 @@
 // caminho, começa a chover, e eles precisam amar uns aos outros para superar as
 // dificuldades. No fim da jornada, eles celebram ao comer juntos.
 
-//Classes : Personagem
+//Classes : Personagem, Jornada, Clima, Dificuldade, Refeicao
 // Metodos: estar, começar, precisar, amar, superar, celebrar, comer
+
+// Relacionando Classes (Associação, Composição e Agregação):
+// Personagem e Jornada - Associação
+// Personagem e Clima - Associação
+// Personagem e Dificuldade - Associação
+// Personagem e Refeição - Associação
+// Jornada e Clima - Associação
+// Jornada e Dificuldade - Associação
+// Dificuldade e Refeição - Associação
+//Dificuldade e Clima - Associação
+
 class Personagem {
   private $nome_personagem;
     private $universo_personagem;

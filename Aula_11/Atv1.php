@@ -5,8 +5,16 @@
 // Um grupo de turistas vai visitar o Japão, o Brasil e o Acre. Em cada lugar da
 // Terra, eles poderão comer comidas típicas e nadar em rios ou praias.
 
-// Classes: Turistas, Local, Alimentação, ponto turistico
+// Classes: Turistas, Local, Alimentacao, Ponto_turistico
 // Metodos: visitar, poder, comer, nadar
+
+// Relacionando Classes (Associação, Composição e Agregação):
+// Turista e Local - Associação
+// Turista e Alimentação - Associação
+// Turista e ponto turístico - Composição
+// local e ponto turistico - Agregação
+// ponto turistico e alimentação - Associação
+
 
 
 class Turistas {
@@ -52,7 +60,7 @@ private $ponto_turistico_local;
         $this->planeta_local = $planeta_local;
     } 
 
-    public function informarAtividades() {
+    public function informarAtividades() { 
         return "No local {$this->cidade_local}, você pode visitar o ponto turístico {$this->ponto_turistico_local}, comer comidas típicas e nadar em rios ou praias.";
     }
 }
@@ -68,7 +76,7 @@ class Alimentacao {
         $this->ingredientes_comida = $ingredientes_comida;
     }
 
-    public function getDescricao() {
+    public function getDescricao() { 
         return "A comida {$this->nome_comida} é do tipo {$this->tipo_comida} e é feita com os seguintes ingredientes: {$this->ingredientes_comida}.";
 
     }
@@ -85,7 +93,7 @@ class Ponto_turistico {
         $this->localizacao_ponto = $localizacao_ponto;
     }
 
-    public function getTipo() {
+    public function getTipo() { 
         return "O ponto turístico {$this->nome_ponto} é do tipo {$this->tipo_ponto} e está localizado em {$this->localizacao_ponto}.";
 
     }

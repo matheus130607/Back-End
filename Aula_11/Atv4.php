@@ -5,8 +5,14 @@
 // Na Terra, pessoas podem engravidar, nascer, crescer, fazer escolhas e até doar
 // sangue para ajudar outras.
 
-//  Classes: Pessoa, Terra
-// Metodos: poder, engravidar, nascer, crescer, fazer, doar  
+//  Classes: Pessoa, Escolha, BancoDeSangue
+// Metodos: poder, engravidar, nascer, crescer, fazer, doar
+
+// Relacionando Classes (Associação, Composição e Agregação):
+// Pessoa e Escolha - Agregação
+// Pessoa e BancoDeSangue - Associação
+// Escolha e BancoDeSangue - Associação
+
 
 class Pessoa {
     private $nome_pessoa;
