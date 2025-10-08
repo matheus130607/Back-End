@@ -117,24 +117,24 @@ $emprestimo1 = new Emprestimo("Carlos Silva", "Dom Casmurro", "01/10/2025", "15/
 $emprestimo2 = new Emprestimo("Mariana Souza", "National Geographic", "02/10/2025", "12/10/2025");
 
 // Demonstração do cenário
-echo $aluno->solicitarEmprestimo("Dom Casmurro") . "<br>";
-echo $sistema->registrarEmprestimo("Carlos Silva", "Dom Casmurro") . "<br>";
-echo $livro->emprestar("Carlos Silva") . "<br><br>";
+echo $aluno->solicitarEmprestimo("Dom Casmurro") . PHP_EOL;
+echo $sistema->registrarEmprestimo("Carlos Silva", "Dom Casmurro") . PHP_EOL;
+echo $livro->emprestar("Carlos Silva") . PHP_EOL;
 
-echo $professor->solicitarEmprestimo("National Geographic") . "<br>";
-echo $sistema->registrarEmprestimo("Mariana Souza", "National Geographic") . "<br>";
-echo $revista->emprestar("Mariana Souza") . "<br><br>";
+echo $professor->solicitarEmprestimo("National Geographic") . PHP_EOL;
+echo $sistema->registrarEmprestimo("Mariana Souza", "National Geographic") . PHP_EOL;
+echo $revista->emprestar("Mariana Souza") . PHP_EOL;
 
 // Devoluções
-echo $aluno->devolverItem("Dom Casmurro") . "<br>";
-echo $sistema->registrarDevolucao("Carlos Silva", "Dom Casmurro") . "<br>";
-echo $livro->devolver() . "<br>";
-echo $emprestimo1->finalizar() . "<br><br>";
+echo $aluno->devolverItem("Dom Casmurro") . PHP_EOL;
+echo $sistema->registrarDevolucao("Carlos Silva", "Dom Casmurro") . PHP_EOL;
+echo $livro->devolver() . PHP_EOL;
+echo $emprestimo1->finalizar() . PHP_EOL;
 
-echo $professor->devolverItem("National Geographic") . "<br>";
-echo $sistema->registrarDevolucao("Mariana Souza", "National Geographic") . "<br>";
-echo $revista->devolver() . "<br>";
-echo $emprestimo2->finalizar() . "<br>";
+echo $professor->devolverItem("National Geographic") . PHP_EOL;
+echo $sistema->registrarDevolucao("Mariana Souza", "National Geographic") . PHP_EOL;
+echo $revista->devolver() . PHP_EOL;
+echo $emprestimo2->finalizar() . PHP_EOL;
 
 ?>
 

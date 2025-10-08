@@ -121,20 +121,20 @@ $pontoBrasil = new Ponto_turistico("Praia de Copacabana", "Praia", "Rio de Janei
 $pontoAcre = new Ponto_turistico("Museu da Borracha", "Histórico", "Rio Branco, Acre");
 
 // Demonstração do cenário
-echo $turista1->visitar() . "<br>";
-echo $localJapao->informarAtividades() . "<br>";
-echo $comidaJapao->getDescricao() . "<br>";
-echo $pontoJapao->getTipo() . "<br><br>";
+echo $turista1->visitar() .PHP_EOL;
+echo $localJapao->informarAtividades() .PHP_EOL;
+echo $comidaJapao->getDescricao() .PHP_EOL;
+echo $pontoJapao->getTipo() .PHP_EOL;
 
-echo $turista2->comer() . "<br>";
-echo $localBrasil->informarAtividades() . "<br>";
-echo $comidaBrasil->getDescricao() . "<br>";
-echo $pontoBrasil->getTipo() . "<br><br>";
+echo $turista2->comer() .PHP_EOL;
+echo $localBrasil->informarAtividades() .PHP_EOL;
+echo $comidaBrasil->getDescricao() .PHP_EOL;
+echo $pontoBrasil->getTipo() .PHP_EOL;
 
-echo $turista1->nadar() . "<br>";
-echo $localAcre->informarAtividades() . "<br>";
-echo $comidaAcre->getDescricao() . "<br>";
-echo $pontoAcre->getTipo() . "<br>";
+echo $turista1->nadar() .PHP_EOL;
+echo $localAcre->informarAtividades() .PHP_EOL;
+echo $comidaAcre->getDescricao() .PHP_EOL;
+echo $pontoAcre->getTipo() .PHP_EOL;
 
 
 

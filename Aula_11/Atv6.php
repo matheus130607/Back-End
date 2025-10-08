@@ -111,30 +111,30 @@ class sessoes_de_filmes {
 
 // Objeto do sistema
 $sistema = new SistemaDeCinema("CineMaster", "1.0", "São Paulo");
-echo $sistema->exibirSessoes() . "<br>";
+echo $sistema->exibirSessoes() . PHP_EOL;
 
 // Objeto de filme
 $filme = new Filmes("Interestelar", "Christopher Nolan", "Ficção Científica", 169);
-echo $filme->getDetalhes() . "<br>";
+echo $filme->getDetalhes() . PHP_EOL;
 
 // Objeto de cliente
 $cliente = new Clientes("Maria Souza", 28, "123.456.789-00", "maria@gmail.com");
 
 // Objeto de sessão
 $sessao = new Sessoes_de_Filmes("Interestelar", "20:30", "Sala 4", "06/10/2025");
-echo $sessao->reservarAssento("C5") . "<br>";
+echo $sessao->reservarAssento("C5") . PHP_EOL;
 
 // Objeto de ingresso
 $ingresso = new Ingressos("Meia", 25.00, "Sessão das 20:30");
-echo $ingresso->validar() . "<br>";
+echo $ingresso->validar() . PHP_EOL;
 
 // Venda do ingresso
-echo $sistema->venderIngresso("Maria Souza", "Meia - Interestelar") . "<br>";
+echo $sistema->venderIngresso("Maria Souza", "Meia - Interestelar") . PHP_EOL;
 
 // Compra pelo cliente
-echo $cliente->comprarIngresso("Maria Souza", "Meia - Interestelar") . "<br>";
+echo $cliente->comprarIngresso("Maria Souza", "Meia - Interestelar") . PHP_EOL;
 
 // Liberar assento
-echo $sessao->liberarAssento("C5") . "<br>";
+echo $sessao->liberarAssento("C5") . PHP_EOL;
 
 ?>

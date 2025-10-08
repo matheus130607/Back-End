@@ -163,23 +163,23 @@ $crianca2 = new Crianca("João", 10, "Bola de futebol");
 $crianca3 = new Crianca("Pedro", 6, "Lego");
 
 // Demonstração do cenário
-echo $missao->iniciar() . "<br><br>";
+echo $missao->iniciar() .PHP_EOL;
 
-echo $batman->treinar() . "<br>";
-echo $superman->treinar() . "<br>";
-echo $homemAranha->treinar() . "<br><br>";
+echo $batman->treinar() .PHP_EOL;
+echo $superman->treinar() .PHP_EOL;
+echo $homemAranha->treinar() .PHP_EOL;
 
-echo $cotil->localTreinamento() . "<br><br>";
+echo $cotil->localTreinamento() .PHP_EOL;
 
-echo $batman->realizarMissao("Treinamento no Cotil") . "<br>";
-echo $superman->realizarMissao("Treinamento no Cotil") . "<br>";
-echo $homemAranha->realizarMissao("Treinamento no Cotil") . "<br><br>";
+echo $batman->realizarMissao("Treinamento no Cotil") .PHP_EOL;
+echo $superman->realizarMissao("Treinamento no Cotil") .PHP_EOL;
+echo $homemAranha->realizarMissao("Treinamento no Cotil") .PHP_EOL;
 
-echo $batman->doarBrinquedo("Maria", "Boneca de pano") . "<br>";
-echo $superman->doarBrinquedo("João", "Bola de futebol") . "<br>";
-echo $homemAranha->doarBrinquedo("Pedro", "Lego") . "<br><br>";
+echo $batman->doarBrinquedo("Maria", "Boneca de pano") .PHP_EOL;
+echo $superman->doarBrinquedo("João", "Bola de futebol") .PHP_EOL;
+echo $homemAranha->doarBrinquedo("Pedro", "Lego") .PHP_EOL;
 
-echo $missao->finalizar() . "<br>";
+echo $missao->finalizar() .PHP_EOL;
 
 ?>
 

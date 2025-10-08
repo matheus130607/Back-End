@@ -129,27 +129,27 @@ $dificuldade = new Dificuldade("Tristeza e desunião", "Alta", "Amor e união");
 $refeicao = new Refeicao("Celebração", "Taverna da Floresta", "Banquete com carnes, pães e vinho");
 
 // História
-echo $john->seguirJornada() . "<br>";
-echo $smurf->seguirJornada() . "<br>";
-echo $deadpool->seguirJornada() . "<br>";
-echo $dexter->seguirJornada() . "<br><br>";
+echo $john->seguirJornada() .PHP_EOL;
+echo $smurf->seguirJornada() .PHP_EOL;
+echo $deadpool->seguirJornada() .PHP_EOL;
+echo $dexter->seguirJornada() .PHP_EOL;
 
-echo $jornada->avancar() . "<br>";
-echo $clima->mudarClima("Tempestade com raios") . "<br><br>";
+echo $jornada->avancar() .PHP_EOL;
+echo $clima->mudarClima("Tempestade com raios") .PHP_EOL;
 
-echo $john->enfrentarDesafio("Chuva intensa e caminho escuro") . "<br>";
-echo $smurf->enfrentarDesafio("Medo de perder o grupo") . "<br>";
-echo $deadpool->enfrentarDesafio("Ficar sério por 5 minutos") . "<br>";
-echo $dexter->enfrentarDesafio("Controlar seus impulsos") . "<br><br>";
+echo $john->enfrentarDesafio("Chuva intensa e caminho escuro") .PHP_EOL;
+echo $smurf->enfrentarDesafio("Medo de perder o grupo") .PHP_EOL;
+echo $deadpool->enfrentarDesafio("Ficar sério por 5 minutos") .PHP_EOL;
+echo $dexter->enfrentarDesafio("Controlar seus impulsos") .PHP_EOL;
 
-echo $dificuldade->superarDificuldade() . "<br><br>";
+echo $dificuldade->superarDificuldade() .PHP_EOL;
 
-echo $john->celebrar() . "<br>";
-echo $smurf->celebrar() . "<br>";
-echo $deadpool->celebrar() . "<br>";
-echo $dexter->celebrar() . "<br><br>";
+echo $john->celebrar() .PHP_EOL;
+echo $smurf->celebrar() .PHP_EOL;
+echo $deadpool->celebrar() .PHP_EOL;
+echo $dexter->celebrar() .PHP_EOL;
 
-echo $refeicao->servir() . "<br>";
+echo $refeicao->servir() .PHP_EOL;
 
 ?>
 

@@ -92,18 +92,18 @@ $escolha2 = new Escolha("Estudo", "João escolheu estudar programação.");
 $bancoSangue = new BancoDeSangue("Hemocentro Central", "São Paulo", "500 litros");
 
 // Ciclo da vida acontecendo
-echo $maria->engravidar() . "<br>";
-echo $joao->nascer() . "<br>";
-echo $joao->crescer() . "<br><br>";
+echo $maria->engravidar() .PHP_EOL;
+echo $joao->nascer() .PHP_EOL;
+echo $joao->crescer() .PHP_EOL;
 
-echo $maria->fazerEscolha("Seguir carreira na medicina") . "<br>";
-echo $escolha1->executarEscolha() . "<br><br>";
+echo $maria->fazerEscolha("Seguir carreira na medicina") .PHP_EOL;
+echo $escolha1->executarEscolha() .PHP_EOL;
 
-echo $joao->fazerEscolha("Estudar programação") . "<br>";
-echo $escolha2->executarEscolha() . "<br><br>";
+echo $joao->fazerEscolha("Estudar programação") .PHP_EOL;
+echo $escolha2->executarEscolha() .PHP_EOL;
 
-echo $maria->doarSangue("Hemocentro Central") . "<br>";
-echo $bancoSangue->receberDoacao("Maria") . "<br>";
+echo $maria->doarSangue("Hemocentro Central") .PHP_EOL;
+echo $bancoSangue->receberDoacao("Maria") .PHP_EOL;
 
 ?>
 
