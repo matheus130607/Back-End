@@ -15,6 +15,8 @@
 // Filme e Ingressos - Associação
 /// Filme e Clientes - Associação
 
+namespace Aula_11\Atv6;
+
 class SistemaDeCinema {
     private $nome_sistema;
     private $versao_sistema;
