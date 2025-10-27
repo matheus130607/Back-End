@@ -1,0 +1,32 @@
+{
+    "1": {
+        "id_aluno": 1,
+        "nome_aluno": "Jo\u00e3o Silva",
+        "curso_aluno": "Engenharia"
+    },
+    "3": {
+        "id_aluno": 3,
+        "nome_aluno": "Beatriz",
+        "curso_aluno": "Eletricista"
+    },
+    "5": {
+        "id_aluno": 5,
+        "nome_aluno": "Oliver",
+        "curso_aluno": "Eletrica"
+    },
+    "6": {
+        "id_aluno": 6,
+        "nome_aluno": "Amanda",
+        "curso_aluno": "Logistica"
+    },
+    "8": {
+        "id_aluno": 8,
+        "nome_aluno": "Joana",
+        "curso_aluno": "Eletrica"
+    },
+    "9": {
+        "id_aluno": 9,
+        "nome_aluno": "Miguel",
+        "curso_aluno": "Designer"
+    }
+}

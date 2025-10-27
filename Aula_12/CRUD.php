@@ -3,7 +3,6 @@
 class Aluno {
     private $id_aluno;
     private $nome_aluno;
-
     private $curso_aluno;
 
     public function __construct($id_aluno, $nome_aluno, $curso_aluno) {

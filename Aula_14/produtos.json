@@ -1,0 +1,32 @@
+{
+    "3": {
+        "cod_produtos": 3,
+        "nome_produtos": "Queijo  brie",
+        "preco_produtos": 12.97
+    },
+    "4": {
+        "cod_produtos": 4,
+        "nome_produtos": "Iorgurte gregp",
+        "preco_produtos": 9.54
+    },
+    "5": {
+        "cod_produtos": 5,
+        "nome_produtos": "Guaran\u00e1 Jesus",
+        "preco_produtos": 6.87
+    },
+    "6": {
+        "cod_produtos": 6,
+        "nome_produtos": "Bolacha Bono",
+        "preco_produtos": 3.57
+    },
+    "7": {
+        "cod_produtos": 7,
+        "nome_produtos": "Desinfetante Barbarex",
+        "preco_produtos": 2.12
+    },
+    "8": {
+        "cod_produtos": 8,
+        "nome_produtos": "Prestobarba Bic.",
+        "preco_produtos": 21.13
+    }
+}
