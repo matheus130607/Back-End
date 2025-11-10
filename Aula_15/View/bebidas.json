@@ -1,0 +1,16 @@
+{
+    "Monster": {
+        "nome": "Monster",
+        "categoria": "Energético",
+        "volume": "500",
+        "valor": "20",
+        "qtde": "4544"
+    },
+    "2": {
+        "nome": "2",
+        "categoria": "Vinho",
+        "volume": "350",
+        "valor": "6",
+        "qtde": "999"
+    }
+}

@@ -6,7 +6,7 @@ class BebidaDAO {
     private $arquivoJson = 'bebidas.json';
 
     public function __construct(){
-        if(file_exists($this->arquivoJson)){
+        if(file_exists("bebidas.json")){
             $conteudoArquivo = file_get_contents($this->arquivoJson);
 
             $dadosArquivoEmArray = json_decode($conteudoArquivo, true);
@@ -24,6 +24,7 @@ class BebidaDAO {
             }
         }
     }
+
         private function salvarArquivo(){
             $dadosParaSalvar=[];
 
@@ -36,7 +37,7 @@ class BebidaDAO {
                     'qtde'=>$bebida->getQtde()
                 ];
             }
-            file_put_contents($this->arquivoJson, json_encode($dadosParaSalvar, JSON_PRETTY_PRINT));
+            file_put_contents($this->arquivoJson, json_encode($dadosParaSalvar, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
         }
 
         // CREATE
@@ -51,12 +52,27 @@ class BebidaDAO {
         }
         
         // UPDATE 
-        public function atualizarBebida($nome, $novoValor, $novaQtde){
-            if(isset($this->bebidasArray[$nome])){
-                $this->bebidasArray[$nome]->setValor($novoValor);
-                $this->bebidasArray[$nome]->setQtde($novaQtde);
+        public function atualizarBebida($nomeOriginal, $novoNome, $novoVolume, $novoCategoria, $novoValor, $novaQtde){
+            if(isset($this->bebidasArray[$nomeOriginal])){
+                $bebida = $this->bebidasArray[$nomeOriginal];
+                // atualiza propriedades
+                $bebida->setNome($novoNome);
+                $bebida->setVolume($novoVolume);
+                $bebida->setCategoria($novoCategoria);
+                $bebida->setValor($novoValor);
+                $bebida->setQtde($novaQtde);
+
+                // se o nome mudou, atualiza a chave no array
+                if ($nomeOriginal !== $novoNome) {
+                    unset($this->bebidasArray[$nomeOriginal]);
+                    $this->bebidasArray[$novoNome] = $bebida;
+                } else {
+                    $this->bebidasArray[$nomeOriginal] = $bebida;
+                }
+
+                // salva somente se encontrado
+                $this->salvarArquivo();
             }
-            $this->salvarArquivo();
         }
 
         // DELETE
