@@ -12,7 +12,7 @@ $controller = new BibliotecaController();
                 $_POST['autor'],
                 $_POST['ano_publicacao'],
                 $_POST['genero'],
-                $_POST['qtde'],
+                $_POST['qtde']
             );
             header('Location: ' . $_SERVER['PHP_SELF']);
             exit;
@@ -28,7 +28,7 @@ $controller = new BibliotecaController();
             $_POST['autor'],
             $_POST['ano_publicacao'],
             $_POST['genero'],
-            $_POST['qtde'],
+            $_POST['qtde']
         );
         header('Location: ' . $_SERVER['PHP_SELF']);
         exit;
@@ -38,7 +38,7 @@ $controller = new BibliotecaController();
     $livroParaEditar = null;
     if(isset($_POST['acao']) && $_POST['acao'] === 'editar') {
         foreach($controller -> ler() as $livro) {
-            if($livro ->getNome() === $_POST['titulo']) {
+            if($livro ->getTitulo() === $_POST['titulo']) {
                 $livroParaEditar = $livro;
                 break;
             }
@@ -56,6 +56,129 @@ $controller = new BibliotecaController();
         <title>Somativa - Biblioteca</title>
     </head>
     <body>
+        <style>
+            * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.form-container {
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.btn {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-editar {
+    background: #4a8bff;
+}
+
+.btn-editar:hover {
+    background: #2f6de0;
+}
+
+.btn-excluir {
+    background: #e74c3c;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-excluir:hover {
+    background: #c0392b;
+}
+
+.lista-container {
+    width: 95%;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    background: #4a8bff;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background: #f1f5ff;
+}
+
+td form {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+@media (max-width: 700px) {
+    table {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    td, th {
+        padding: 8px;
+    }
+}
+
+        </style>
         <h1>Biblioteca Malaman</h1><br><hr>
 
         <div class="form-container">
@@ -89,8 +212,59 @@ $controller = new BibliotecaController();
         <?php else: ?>
             <h2>Cadastrar Novo Livro</h2>
             <form method="POST">
+                <input type="hidden" name="acao" value="salvar">
 
+                <input type="text" name="titulo" placeholder="Titulo do Livro:" required>
+
+                <input type="text" name="autor" placeholder="Autor do livro:" required>
+
+                <input type="number" name="ano_publicacao" placeholder="Ano de publicação do Livro:" required>
+
+                <input type="text" name="genero" placeholder="Gênero do livro:" required>
+
+                <input type="number" name="qtde" placeholder="Quantidade de livro:" required>
+
+                <button type="submit" class="btn btn-editar">Cadastrar</button>
             </form>
+            <?php endif; ?>
         </div>
+
+        <div class="lista-container">
+            <h2>Lista de livros</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Titulo</th>
+                        <th>Autor</th>
+                        <th>Ano de publicação</th>
+                        <th>Gênero</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($lista as $livro): ?>
+                <tr>
+                    <td><?php echo htmlspecialchars($livro->getTitulo()); ?></td>
+                    <td><?php echo htmlspecialchars($livro->getAutor()); ?></td>
+                    <td><?php echo htmlspecialchars($livro->getAno_publicacao()); ?></td>
+                    <td><?php echo htmlspecialchars($livro->getGenero()); ?></td>
+                    <td><?php echo htmlspecialchars($livro->getQtde()); ?></td>
+                    <td>
+                        <form method="POST">
+                            <input type="hidden" name="acao" value="editar">
+                            <input type="hidden" name="titulo" value="<?php echo htmlspecialchars($livro->getTitulo()); ?>">
+                            <button type="submit" class="btn btn-editar">Editar</button>
+                        </form>
+                        <form method="POST" onsubmit="return confirm('Tem certeza que deseja excluir este livro?');">
+                        <input type="hidden" name="acao" value="deletar">
+                        <input type="hidden" name="titulo" value="<?php echo htmlspecialchars($livro->getTitulo()); ?>">
+                        <button type="submit" class="btn btn-excluir">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
     </body>
     </html>

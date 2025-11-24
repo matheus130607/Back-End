@@ -10,7 +10,7 @@ class Connection {
                 $host = 'localhost';
                 $dbname = 'somativa_biblioteca';
                 $user = 'root';
-                $pass = 'senaisp';
+                $pass = '1234';
 
                 $dsn_server = "mysql:host=$host;charset=utf8";
 

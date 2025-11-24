@@ -1,7 +1,7 @@
 <?php
 
-require_once 'biblioteca.php';
-require_once 'bibliotecaConnection.php';
+require_once __DIR__ . '/biblioteca.php';
+require_once __DIR__ . '/bibliotecaConnection.php';
 
 class BibliotecaDAO {
 
@@ -13,10 +13,11 @@ class BibliotecaDAO {
         $this -> conn -> exec(
             "CREATE TABLE IF NOT EXISTS livro (
                 id INT AUTO_INCREMENT PRIMARY KEY,
-                titulo VARCHAR(200) NOT NULL,
-                autor VARCHAR(200) NOT NULL,ano_publicacao YEAR NOT NULL,
-                genero VARCHAR(50) NOT NULL,qtde INT NOT NULL
-            )
+                titulo VARCHAR(200),
+                autor VARCHAR(150),
+                ano_publicacao INT,
+                genero VARCHAR(50),
+                qtde INT)
         ");
     }
 
